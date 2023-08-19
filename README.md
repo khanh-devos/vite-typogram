@@ -31,6 +31,6 @@ You can embed typograms into pages using the JS rendering library:
 ```
 
 A comparison with related work is available [here](https://google.github.io/typograms/#related).
-The pure owner of this algorithm is [samuelgoto](https://github.com/samuelgoto/typograms)
+The pure owner of this algorithm is [Samuelgoto](https://github.com/samuelgoto/typograms)
 
 
