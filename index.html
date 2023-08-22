@@ -9,18 +9,34 @@
   <body>
     <div id="app"></div>
     <script type="text/typogram">
+    @(animate:{time:1000, repeat:true, width:2000, height:100})          
+    (
       +---+
-     / "K" \--> My first diagram!
+     / (1) \--> My first diagram!
     +-------+
+    )@{class123}
+      
+    (
+      +---+
+     / (2) \--> My first diagram!
+    +-------+
+    )@{class123}
+
+    (
+      +---+
+     / (3) \--> My first diagram!
+    +-------+
+    )@{class123}
+
     </script>
 
     <script type="text/typogram">
-      +---+
-     / "K" \--> My first diagram!
-    +-------+
+      (__)
+      /  \
+      \__/
     </script>
     
 
-    <script type="module" src="./src/browser.js"></script>
   </body>
+  <script type="module" src="./src/browser.js"></script>
 </html>
