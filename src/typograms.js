@@ -1257,11 +1257,11 @@ function render(diagram) {
   return result;
 }
 
-function create(source, zoom, debug) {
+const create = (source, zoom, debug) => {
   const diagram = source
     .split("\n")
-    .map((line) => line.trimEnd().split(""));
-
+    .map((line) => line.split(""));
+  
   diagram.shift();
   diagram.splice(-1);
 
