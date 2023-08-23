@@ -1,5 +1,5 @@
 export function separate (text) {
-  let [res, checkFirst, start, classname, animation] = [[''], true, false, '', {}];
+  let [res, checkBracket, start, classname, animation] = [[''], true, false, '', {}];
   for (const line of text.split('\n')) {
     // define animate
     if (line.includes('@(animate:{')) {
@@ -13,9 +13,9 @@ export function separate (text) {
     if (line.includes('(')) {
       start = true;
       if (start) {
-        if (checkFirst) {
+        if (checkBracket) {
           res.push(line.replace('(',''))
-          checkFirst = false;
+          checkBracket = false;
         }
         else res.push(line)
       }
@@ -23,7 +23,7 @@ export function separate (text) {
     else if (line.includes(')@{')) {
       classname = line.substring(line.indexOf('{') + 1, line.indexOf('}'))
       if (start) {
-        checkFirst = true;
+        checkBracket = true;
         res.push(line.substr(0, line.indexOf(')@{')))
       };
       res.push('\n###');
