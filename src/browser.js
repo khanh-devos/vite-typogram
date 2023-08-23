@@ -8,26 +8,26 @@ document.addEventListener("DOMContentLoaded", async () => {
       continue;
     }
     //setTimeout(() => {
-    const source123 = script.innerText;
+    const source = script.innerText;
     const zoom = Number(script.getAttribute("zoom") || 0.3);
     const debug = script.hasAttribute("grid");
 
-    if (!source123.includes(')@{')) {
+    if (!source.includes(')@{')) {
       // define there is no animation inside.
-      const svg = create(source123, zoom, debug);      
+      const svg = create(source, zoom, debug);      
       script.parentNode.insertBefore(svg, script.nextSibling);
       continue;
     } 
 
     // animation starts
-    const [sources, classname, ani] = separate(source123);
+    const [newSources, classname, ani] = separate(source);
     const {width, height} = ani;
-    var containSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    const containSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     containSvg.setAttribute("width", width);
     containSvg.setAttribute("height", height);
 
-    for (const source of sources) {
-      const svg = create(source, zoom, debug);
+    for (const newSource of newSources) {
+      const svg = create(newSource, zoom, debug);
       svg.classList.add(classname)
       svg.style.display = 'none';
       containSvg.appendChild(svg);
