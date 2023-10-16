@@ -21,6 +21,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // animation starts
     const [newSources, classname, ani] = separate(source);
+    newSources.forEach(element => {
+      console.log(element, "/////")
+    }); 
     const {width, height} = ani;
     const containSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     containSvg.setAttribute("width", width);
@@ -37,6 +40,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     //}, 0);
     
     animation(classname, ani);
+
+    containSvg.addEventListener('click', () => {
+      ani.repeat = !ani.repeat;
+    })
   }
 
 

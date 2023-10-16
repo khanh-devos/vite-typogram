@@ -16,31 +16,40 @@
     
 
     <script type="text/typogram">
-    @(animate:{time:1000, repeat:true, width:2000, height:100})          
+    @(animate:{time:1000, repeat:true, width:1200, height:100})          
     (
       +---+
-     / (1) \--> My first diagram!
+     / (1) \--> (My first diagram!)
     +-------+
     )@{class123}
       
     (
-      +---+
-     / (2) \--> My first diagram!
-    +-------+
+        +---+
+       / (2) \--> (My second diagram!)
+      +-------+
     )@{class123}
 
     (
-      +---+
-     / (3) \--> My first diagram!
-    +-------+
+          +---+
+         / (3) \--> My third diagram!
+        +-------+
     )@{class123}
 
     </script>
 
     <script type="text/typogram">
-      (__)
-      /  \
-      \__/
+    @(animate:{time:200, repeat:true, width:1200, height:100}) 
+    (  
+      (___)
+      /- -\
+      \___/
+    )@{classx}
+
+    (  
+      (___)
+      /o o\
+      \___/
+    )@{classx}
     </script>
     
 

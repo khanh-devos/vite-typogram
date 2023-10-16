@@ -46,6 +46,9 @@ export async function animation (classname, ani) {
     for (const svg of document.getElementsByClassName(classname)) {
       if (svg.getAttribute('width') === '0') continue;
       svg.style.display = 'block';
+
+      while (!ani.repeat) await delay(1000);
+      
       await delay(time);
       svg.style.display = 'none';
     }
