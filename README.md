@@ -52,7 +52,8 @@ You can embed typograms into pages using the JS rendering library:
 </body>
 ```
 
-A comparison with related work is available [here](https://google.github.io/typograms/#related).
-The original owner of this algorithm is a Google developer [Samuelgoto](https://github.com/samuelgoto/typograms). I added animation features.
+- This is a [LIVE DEMO](https://www.loom.com/share/a6e1bde3acfa41268aa37bad186e0312?sid=56672a7d-de0a-4c98-9ca5-cac9bf4fa245).
+- A comparison with related work is available [here](https://google.github.io/typograms/#related).
+- The original owner of this algorithm is a Google developer [Samuelgoto](https://github.com/samuelgoto/typograms). I added animation features.
 
 
